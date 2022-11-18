@@ -1,13 +1,12 @@
-<<<<<<< HEAD
+
 Node-red
 ========
 
 this is my Node-red IOT Server App project
 
 ### About
-
-This is your project's README.md file. It helps users understand what your
-project does, how to use it and anything else they may need to know.
+ 
+ this is my all project About Nod-red IOT code. :)
 =======
 # Node-Red
  --
