@@ -1,0 +1,294 @@
+[
+    {
+        "id": "3cf6b64a4a08d4ec",
+        "type": "tab",
+        "label": "get data from server",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d803b9c00d4ff6e4",
+        "type": "tab",
+        "label": "TFJS",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d9ad129b229298b6",
+        "type": "mqtt-broker",
+        "name": "dose-server",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a850249bb2508d13",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8d64f1a6d25608b5",
+        "type": "mqtt-broker",
+        "name": "hive",
+        "broker": "broker.hivemq.com",
+        "port": "8000",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b84cbac6d056fa28",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "06ac03e85a9daa3b",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": "picture"
+    },
+    {
+        "id": "6c107a27df91cc82",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "port": "27017",
+        "db": "firstdatabase.m0bf5u9.mongodb.net",
+        "name": ""
+    },
+    {
+        "id": "ab99b9890a254c7d",
+        "type": "mongodb",
+        "hostname": "mongodb+srv://dose:<password>@firstdatabase.m0bf5u9.mongodb.net/test",
+        "port": "27017",
+        "db": "mydb",
+        "name": "dose-batabase"
+    },
+    {
+        "id": "c850176dc9d0bcde",
+        "type": "http request",
+        "z": "3cf6b64a4a08d4ec",
+        "name": "Request data",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://dose.herokuapp.com/api",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "4f3a49ed49096aef"
+            ]
+        ]
+    },
+    {
+        "id": "1a4eaebc328af392",
+        "type": "inject",
+        "z": "3cf6b64a4a08d4ec",
+        "name": "Get data from Server",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "c850176dc9d0bcde"
+            ]
+        ]
+    },
+    {
+        "id": "4f3a49ed49096aef",
+        "type": "debug",
+        "z": "3cf6b64a4a08d4ec",
+        "name": "from serverside",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "319e0ea4c5d03a75",
+        "type": "debug",
+        "z": "d803b9c00d4ff6e4",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c98fc2c5f0f6d9a5",
+        "type": "image",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "width": 160,
+        "data": "annotatedInput",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 600,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "950267f024c1b082",
+        "type": "camera",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "c1fbf73d98fea176",
+                "e9bf289eb7b4a81d",
+                "8d19ed659640e2d2"
+            ]
+        ]
+    },
+    {
+        "id": "c1fbf73d98fea176",
+        "type": "cocossd",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [
+                "319e0ea4c5d03a75",
+                "c98fc2c5f0f6d9a5"
+            ]
+        ]
+    },
+    {
+        "id": "f794336ac664b9b3",
+        "type": "fileinject",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "c1fbf73d98fea176",
+                "e9bf289eb7b4a81d"
+            ]
+        ]
+    },
+    {
+        "id": "e9bf289eb7b4a81d",
+        "type": "image",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 380,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8d19ed659640e2d2",
+        "type": "handpose",
+        "z": "d803b9c00d4ff6e4",
+        "name": "",
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "c98fc2c5f0f6d9a5",
+                "e9bf289eb7b4a81d"
+            ]
+        ]
+    }
+]

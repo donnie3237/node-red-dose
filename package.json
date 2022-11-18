@@ -1,0 +1,12 @@
+{
+    "name": "Node-red",
+    "description": "this is my Node-red IOT Server App project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
