@@ -2,7 +2,13 @@
     "name": "Node-red",
     "description": "this is my Node-red IOT Server App project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-mongodb": "0.0.18",
+        "node-red-dashboard": "3.2.0",
+        "node-red-contrib-tensorflow": "0.3.1",
+        "node-red-contrib-image-output": "0.6.3",
+        "node-red-contrib-browser-utils": "0.0.11"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
