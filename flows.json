@@ -198,8 +198,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 260,
+        "x": 560,
+        "y": 100,
         "wires": []
     },
     {
@@ -214,8 +214,8 @@
         "active": true,
         "pass": false,
         "outputs": 0,
-        "x": 600,
-        "y": 380,
+        "x": 580,
+        "y": 220,
         "wires": []
     },
     {
@@ -223,8 +223,8 @@
         "type": "camera",
         "z": "d803b9c00d4ff6e4",
         "name": "",
-        "x": 170,
-        "y": 280,
+        "x": 150,
+        "y": 120,
         "wires": [
             [
                 "c1fbf73d98fea176",
@@ -238,8 +238,8 @@
         "type": "cocossd",
         "z": "d803b9c00d4ff6e4",
         "name": "",
-        "x": 380,
-        "y": 320,
+        "x": 360,
+        "y": 160,
         "wires": [
             [
                 "319e0ea4c5d03a75",
@@ -252,8 +252,8 @@
         "type": "fileinject",
         "z": "d803b9c00d4ff6e4",
         "name": "",
-        "x": 180,
-        "y": 340,
+        "x": 160,
+        "y": 180,
         "wires": [
             [
                 "c1fbf73d98fea176",
@@ -273,8 +273,8 @@
         "active": true,
         "pass": false,
         "outputs": 0,
-        "x": 380,
-        "y": 420,
+        "x": 360,
+        "y": 260,
         "wires": []
     },
     {
@@ -282,8 +282,8 @@
         "type": "handpose",
         "z": "d803b9c00d4ff6e4",
         "name": "",
-        "x": 380,
-        "y": 280,
+        "x": 360,
+        "y": 120,
         "wires": [
             [
                 "c98fc2c5f0f6d9a5",
